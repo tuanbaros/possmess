@@ -10,18 +10,13 @@ var users = require('./routes/users');
 
 var app = express();
 
-const postChatworkMessage = require('post-chatwork-message')
-const APIKey = '297c0b8f48cc9feaa3cebf3cf59b69dc'
-const roomId = '60478387'
+// var gith = require('gith').create( 9001 );
 
-var gith = require('gith').create( 9001 );
-
-gith({
-  repo: 'tuanbaros/checkstyledemo'
-}).on( 'branch:develop', function( payload ) {
-    postChatworkMessage(APIKey, roomId, 'hello world')
-    console.log('test');
-});
+// gith({
+//   repo: 'tuanbaros/checkstyledemo'
+// }).on( 'branch:develop', function( payload ) {
+//     console.log('test');
+// });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
